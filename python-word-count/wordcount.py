@@ -1,5 +1,9 @@
 def word_count(text):
-    text_list = text.split()
+    new_text = ""
+    for char in text:
+        if char == " " or char.isalnum():
+            new_text += char.lower()
+    text_list = new_text.split()
     text_dictionary = {}
     for word in text_list:
         text_list.count(word)
@@ -7,7 +11,7 @@ def word_count(text):
     return text_dictionary
 
 
-    # # print(text_list)
-    # print(text_dictionary)
-
-# word_count("one fish two fish red fish blue fish")
+#     print(text_list)
+#     print(text_dictionary)
+#
+# word_count("One fish#$% two fish red fish %^#$ blue fish")
