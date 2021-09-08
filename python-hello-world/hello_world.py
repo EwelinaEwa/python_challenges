@@ -3,5 +3,7 @@
 #
 
 
-def hello(name=''):
-    return
+def hello(name='World'):
+    return f"Hello, {name}!"
+
+
