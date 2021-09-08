@@ -1,8 +1,10 @@
+import re
+
 def word_count(text):
+    text = re.sub('[^0-9a-zA-Z]+', ' ', text)
     new_text = ""
     for char in text:
-        if char == " " or char.isalnum():
-            new_text += char.lower()
+        new_text += char.lower()
     text_list = new_text.split()
     text_dictionary = {}
     for word in text_list:
@@ -14,4 +16,5 @@ def word_count(text):
 #     print(text_list)
 #     print(text_dictionary)
 #
-# word_count("One fish#$% two fish red fish %^#$ blue fish")
+# word_count("rah rah ah ah ah\nroma roma ma\n"
+#                        "ga ga oh la la\nwant your bad romance")
