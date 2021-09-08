@@ -1,7 +1,8 @@
 import re
 
+
 def word_count(text):
-    text = re.sub('[^0-9a-zA-Z]+', ' ', text)
+    text = re.sub('[^0-9a-zA-ZА-я]+', ' ', text)
     new_text = ""
     for char in text:
         new_text += char.lower()
